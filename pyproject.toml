@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stm32-forge"
+version = "0.1.0"
+description = "Independent command-line and MCP toolkit for STM32CubeMX projects"
+requires-python = ">=3.10"
+
+[project.scripts]
+stm32-forge = "stm32_forge.cli:main"
+stm32-forge-mcp = "stm32_forge.mcp:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
