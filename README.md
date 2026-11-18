@@ -74,6 +74,20 @@ python -m cubemx1 probe describe --device <device> <IP>
 
 MCP 提供 IOC build/import/check/generate、探测查询和会话状态工具；支持资源 `cubemx1://protocol/target` 与 `cubemx1://protocol/mcp`。完整清单在 [mcp/mcp.json](mcp/mcp.json)。
 
+安装后推荐使用：
+
+```powershell
+cubemx1-mcp
+```
+
+源码目录也可以直接运行：
+
+```powershell
+python .\mcp\mcp_server.py
+```
+
+安装后同时提供 `cubemx1`（离线 IOC/查询 CLI）、`stm32-forge`（兼容 CLI）和 `stm32-forge-mcp`（原生 Forge MCP）入口。
+
 ## 原有 Forge 命令
 
 安装本项目的兼容工具：

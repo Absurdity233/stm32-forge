@@ -4,13 +4,23 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stm32-forge"
-version = "0.1.0"
+version = "0.2.0"
 description = "Independent command-line and MCP toolkit for STM32CubeMX projects"
 requires-python = ">=3.10"
 
 [project.scripts]
 stm32-forge = "stm32_forge.cli:main"
 stm32-forge-mcp = "stm32_forge.mcp:main"
+cubemx1 = "cubemx1.cli:main"
+cubemx1-mcp = "mcp_server:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["mcp_server"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+cubemx1 = ["resources/*.md"]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src", "mcp"]
